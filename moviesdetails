@@ -1,0 +1,32 @@
+import React from 'react';
+import { View, Text, StyleSheet } from 'react-native';
+
+export default function moviesdetails({ route }) {
+  const { titulo, sinopse } = route.params;
+
+  return (
+    <View style={styles.container}>
+      <Text style={styles.title}>Titulo: {titulo}</Text>
+      <Text style={styles.sinopse}>Sinopse: {sinopse}</Text>
+    </View>
+  );
+}
+
+const styles = StyleSheet.create({
+  container: {
+    flex: 1,
+    backgroundColor: '#000000',
+    padding: 10,
+  },
+  title: {
+    fontSize: 24,
+    fontWeight: 'bold',
+    color: '#FFFFFF',
+    marginBottom: 10,
+  },
+  sinopse: {
+    fontSize: 16,
+    color: '#FFFFFF',
+    lineHeight: 22,
+  },
+});
